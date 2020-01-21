@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="hitwe.com" verbose="1"
+       thread-count="1">
+    <test name="CrossBrowserChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.RegistrationPageTest">
+                <methods>
+
+                    <include name="checkTheSuccessfulRegistrationAndUploadAvatar"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="CrossBrowserFirefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.RegistrationPageTest">
+                <methods>
+
+                    <include name="checkTheSuccessfulRegistrationAndUploadAvatar"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
